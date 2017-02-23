@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :question %><br>
-    <%= f.text_area :question %>
+    <%= f.text_area :question, :required => true, :class=>"form-control textfield-border form-question" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :answer %><br>
-    <%= f.text_area :answer %>
+    <%= f.text_area :answer, :required => true, :class=>"form-control textfield-border form-answer" %>
   </div>
   <div class="form-group">
     <%= f.label :image %>
     <%= f.cl_image_upload :image, :class=>"feature-image"  %>
   </div>
-  <div class="field">
-    <%= f.label :tech %><br>
-    <%= f.text_area :tech %>
+  <div class="form-group">
+    <%= label_tag "Tech tags" %><br>
+    <%= f.text_area :tech, :class=>"form-control textfield-border" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="button-center btn-div-custom">
+    <%= f.submit :class=>"btn btn-primary btn-custom" %>
   </div>
 <% end %>
