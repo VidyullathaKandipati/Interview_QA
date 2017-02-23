@@ -11,7 +11,7 @@
   <div class="answer">
     <%= simple_format(q_a.answer) %>
   </div>
-    <% if !q_a.image.empty? %>
+    <% if !q_a.image.present? %>
     <h4>Diagramatic Illustration</h4>
       <div class="image-div">
         <%= cl_image_tag q_a.image %>
