@@ -66,3 +66,9 @@ textarea.form-question{
 textarea.form-answer{
   height: 15em;
 }
+.bubble{
+  position: absolute;
+  border-radius: 100%;
+  border: 1px solid black;
+  background-color: lightblue;
+}

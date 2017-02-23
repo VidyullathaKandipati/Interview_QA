@@ -28,8 +28,6 @@ class QuestionAnswersController < ApplicationController
     if params[:file].present?
       req = Cloudinary::Uploader.upload(params[:file])
       @question_answer.image = req["public_id"]
-    else
-      @question_answer.image = "http://res.cloudinary.com/dzhoxlq6z/image/upload/v1485418003/New_carousel/home2.jpg"
     end
 
     respond_to do |format|
