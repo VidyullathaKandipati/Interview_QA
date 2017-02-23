@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>QA</title>
+  <title>Interview Q&A</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= cloudinary_js_config %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-  <a href="#">Home</a>
-</nav>
-<%= yield %>
+  <div class="container container-custom">
+    <nav class="navbar navbar-inverse nav-custom">
+      <%= link_to 'Home', root_path %>
+      <%= link_to 'New Question answer', new_question_answer_path %>
+    </nav>
+    <%= yield %>
+  </div>
 
 </body>
 </html>

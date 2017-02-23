@@ -1,4 +1,4 @@
-<%= form_for(@question_answer) do |f| %>
+<%= form_for(@question_answer, :html=>{:multipart=>true}) do |f| %>
   <% if @question_answer.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@question_answer.errors.count, "error") %> prohibited this question_answer from being saved:</h2>
@@ -19,9 +19,9 @@
     <%= f.label :answer %><br>
     <%= f.text_area :answer %>
   </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_area :image %>
+  <div class="form-group">
+    <%= f.label :image %>
+    <%= f.cl_image_upload :image, :class=>"feature-image"  %>
   </div>
   <div class="field">
     <%= f.label :tech %><br>

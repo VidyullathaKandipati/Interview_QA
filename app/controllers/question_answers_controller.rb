@@ -25,6 +25,12 @@ class QuestionAnswersController < ApplicationController
   # POST /question_answers.json
   def create
     @question_answer = QuestionAnswer.new(question_answer_params)
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      @question_answer.image = req["public_id"]
+    else
+      @question_answer.image = "http://res.cloudinary.com/dzhoxlq6z/image/upload/v1485418003/New_carousel/home2.jpg"
+    end
 
     respond_to do |format|
       if @question_answer.save
@@ -42,6 +48,11 @@ class QuestionAnswersController < ApplicationController
   def update
     respond_to do |format|
       if @question_answer.update(question_answer_params)
+        if params[:file].present?
+          req = Cloudinary::Uploader.upload(params[:file])
+          @question_answer.image = req["public_id"]
+          @question_answer.save
+        end
         format.html { redirect_to @question_answer, notice: 'Question answer was successfully updated.' }
         format.json { render :show, status: :ok, location: @question_answer }
       else

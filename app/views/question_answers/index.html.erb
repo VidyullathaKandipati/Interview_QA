@@ -1,14 +1,18 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Web development</h1>
 <h1>Interview Question and Answers</h1>
-<%= link_to 'New Question answer', new_question_answer_path %>
 
 <% @question_answers.each do |q_a| %>
   <h3>Question</h3>
     <%= q_a.question %>
   <h3>Answer</h3>
     <%= q_a.answer %>
-
-  <%= link_to 'Show', q_a %>
-  <%= link_to 'Edit', edit_question_answer_path(q_a) %>
+  <h4>Diagramatic Illustration</h4>
+    <% if !q_a.image.empty? %>
+      <%= cl_image_tag q_a.image %>
+    <% end %>
+  <br>
+  <br>
+  | <%= link_to 'Show', q_a %> |
+  | <%= link_to 'Edit', edit_question_answer_path(q_a) %> |
 <% end %>

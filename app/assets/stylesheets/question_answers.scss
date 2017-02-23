@@ -1,3 +1,18 @@
 // Place all the styles related to the Question_Answers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// body{
+//   background-color: #24292e;
+// }
+.container-custom{
+  background-color: white;
+  padding: 2em;
+}
+.feature-image{
+  max-width: 500px;
+  max-height: 300px;
+}
+.nav-custom{
+  padding: 2em;
+  font-size: 1.2em;
+}
