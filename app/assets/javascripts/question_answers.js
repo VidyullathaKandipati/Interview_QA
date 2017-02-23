@@ -3,17 +3,18 @@ $(document).ready(function(){
   $('.new_question_answer').on('submit', makeHeart);
   $('.edit_question_answer').on('submit', makeHeart);
   function makeHeart(e){
-    var $bubble = $("<div class='bubble'/>").css({
-      'left': 50,
-      'top': 50,
+    setTimeout(80000);
+    var $heart = $("<div class='heart'/>").css({
+      'left': 500,
+      'top': 500,
       'width': 50 + 'px',
       'height': 50 + 'px',
     });
-    $bubble.appendTo($body);
+    $heart.appendTo($body);
 
-    $bubble.animate({top: -200}, 3000, removeBubble);
+    $heart.animate({top: -200}, 30000, removeBubble);
     function removeBubble(){
-      $bubble.remove();
+      $heart.remove();
     }
   }
 });
