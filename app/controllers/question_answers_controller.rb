@@ -10,6 +10,9 @@ class QuestionAnswersController < ApplicationController
   # GET /question_answers/1
   # GET /question_answers/1.json
   def show
+    respond_to do |format|
+      format.js
+    end
   end
 
   # GET /question_answers/new

@@ -3,23 +3,23 @@
 <p>
   <div class="question">
     <h3>Question:</h3>
-    <%= simple_format(@question_answer.question) %>
+    <%= simple_format(question_answer.question) %>
   </div>
 </p>
 
 <p>
   <div class="answer">
     <h3>Answer:</h3>
-    <%= simple_format(@question_answer.answer) %>
+    <%= simple_format(question_answer.answer) %>
   </div>
 </p>
 
 <p>
-  <% if @question_answer.image.present? %>
-    <% if !@question_answer.image.empty? %>
+  <% if question_answer.image.present? %>
+    <% if !question_answer.image.empty? %>
       <h3>Diagramatic Illustration</h3>
       <div class="image-div">
-        <%= cl_image_tag @question_answer.image %>
+        <%= cl_image_tag question_answer.image, :class=>"img-responsive" %>
       </div>
     <% end %>
   <% end %>
@@ -28,11 +28,11 @@
 <p>
   <div>
     <h3>Tech tags:</h3>
-    <%= @question_answer.tech %>
+    <%= question_answer.tech %>
   </div>
 </p>
 
 <div class="nav-controls">
-  | <%= link_to 'Edit', edit_question_answer_path(@question_answer) %> |
+  | <%= link_to 'Edit', edit_question_answer_path(question_answer) %> |
   | <%= link_to 'Back', question_answers_path %> |
 </div>

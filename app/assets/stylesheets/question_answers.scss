@@ -9,11 +9,12 @@
   padding: 2em;
 }
 .image-div{
+  width: 80%;
   text-align: center;
 }
 .feature-image{
-  max-width: 500px;
-  max-height: 300px;
+  max-width: 80%;
+  max-height: 80%;
 }
 .nav-custom{
   padding: 2em;
@@ -38,11 +39,15 @@
   font-size: 1.2em;
   background-color: #24292e;
 }
-.question, .answer{
+.question p, .answer p{
   font-size: 1.2em;
 }
 h3{
   text-decoration: underline;
+}
+.nav-controls{
+  text-align: center;
+  font-size: 1.2em;
 }
 .nav-controls a:hover{
   text-decoration: line-through;
@@ -66,6 +71,14 @@ textarea.form-question{
 textarea.form-answer{
   height: 15em;
 }
+.index_link p{
+  font-size: 1.2em;
+}
+.index_link:hover{
+  color: black;
+  text-decoration: line-through;
+}
+
 // .bubble{
 //   position: absolute;
 //   // border-radius: 100%;
