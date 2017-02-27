@@ -42,6 +42,9 @@
 .question, .answer p{
   font-size: 1.1em;
 }
+.question:hover{
+  cursor: pointer;
+}
 h4{
   text-decoration: underline;
 }
