@@ -54,7 +54,7 @@ class QuestionAnswersController < ApplicationController
           @question_answer.image = req["public_id"]
           @question_answer.save
         end
-        format.html { redirect_to @question_answer, notice: 'Question answer was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Question answer was successfully updated.' }
         format.json { render :show, status: :ok, location: @question_answer }
       else
         format.html { render :edit }
