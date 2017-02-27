@@ -35,7 +35,7 @@ class QuestionAnswersController < ApplicationController
 
     respond_to do |format|
       if @question_answer.save
-        format.html { redirect_to @question_answer, notice: 'Question answer was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Question answer was successfully created.' }
         format.json { render :show, status: :created, location: @question_answer }
       else
         format.html { render :new }
