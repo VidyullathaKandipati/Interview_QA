@@ -39,7 +39,7 @@
   font-size: 1.2em;
   background-color: #24292e;
 }
-.question p, .answer p{
+.question, .answer p{
   font-size: 1.2em;
 }
 h3{
@@ -71,10 +71,11 @@ textarea.form-question{
 textarea.form-answer{
   height: 15em;
 }
-.index_link p{
+.index_link{
   font-size: 1.2em;
 }
 .index_link:hover{
+  background-color: white;
   color: black;
   text-decoration: line-through;
 }

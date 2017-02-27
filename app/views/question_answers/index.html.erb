@@ -2,13 +2,16 @@
 <h1>Web development</h1>
 <h1>Interview Question and Answers</h1>
 
-<div class="col-md-6">
+<!-- <div class="col-md-6"> -->
 <% @question_answers.each do |q_a| %>
   <br>
-  <%= link_to simple_format(q_a.question), q_a, :remote => true, :class=>"index_link"  %>
+  <%= link_to q_a.question, q_a, :remote => true, :class=>"index_link"  %><span class="caret"></span>
+  <br>
+  <div id="answer<%= q_a.id %>" class="answer">
+  </div>
 <% end %>
-</div>
-<div class="col-md-6">
+<!-- </div> -->
+<!-- <div class="col-md-6">
   <div id="answer">
   </div>
-</div>
+</div> -->
