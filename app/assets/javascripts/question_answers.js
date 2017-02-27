@@ -17,4 +17,14 @@ $(document).ready(function(){
       $heart.remove();
     }
   }
+
+  //Hiding all the answers
+  $('.answer').hide();
+
+  //Click on the question shows answers
+  $('.question').on('click',showAnswer);
+  function showAnswer(){
+    q_id = $(this).attr('id');
+    $('#answer'+q_id).toggle();
+  }
 });

@@ -4,8 +4,14 @@
 
 <% @question_answers.each do |q_a| %>
   <br>
-  <%= link_to q_a.question, q_a, :remote => true, :class=>"index_link"  %><span class="caret"></span>
+  <%# link_to q_a.question, q_a, :remote => true, :class=>"index_link"  %>
+  <!-- <h3>Question:</h3> -->
+  <div class="question" id="<%= q_a.id %>">
+    <%= q_a.question %><span class="caret"></span>
+  </div>
   <br>
   <div id="answer<%= q_a.id %>" class="answer">
+    <h4>Answer:</h4>
+    <%= simple_format(q_a.answer) %>
   </div>
 <% end %>
