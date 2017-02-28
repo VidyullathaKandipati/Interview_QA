@@ -13,5 +13,15 @@
   <div id="answer<%= q_a.id %>" class="answer">
     <h4>Answer:</h4>
     <%= simple_format(q_a.answer) %>
+    <p>
+      <% if q_a.image.present? %>
+        <% if !q_a.image.empty? %>
+          <h4>Diagramatic Illustration</h4>
+          <div class="image-div">
+            <%= cl_image_tag q_a.image, :class=>"img-responsive" %>
+          </div>
+        <% end %>
+      <% end %>
+    </p>
   </div>
 <% end %>
